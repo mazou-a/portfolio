@@ -6,6 +6,50 @@
     <title>CV(Resume)</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
+<style>
+    .section {
+        margin-bottom: 1rem;
+    }
+
+    .section h2{
+        border-bottom: 2px solid;
+        margin-bottom: 0.5rem;
+    }
+
+    .entry{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin: 0;
+    }
+
+    .entry h3 {
+        font-size: 1.15rem;
+        margin: 0;
+        margin-bottom: 0.3rem;
+    }
+
+    .loc {
+        text-align: right;
+    }
+
+    .title {
+        font-style: italic;
+        margin: 0;
+    }
+
+    .info {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .date {
+        grid-column: 2 / 3;
+        text-align: right;
+    }
+
+</style>
+
 <body>
     <nav>
         <a href="../index.html">Home</a>
@@ -16,54 +60,40 @@
     </nav>
     <header>
         <h1>CV(Resume)</h1>
-        <h1><center>Max Zou</center></h1>
-        <p1><center>9450 Gilmann Drive, La Jolla, CA 92092 | (123) 456-7899 | mazou@ucsd.edu</center></p1>
+        <h1 style="font-size: 2rem; margin-bottom: 0.2rem;"><center>Max Zou</center></h1>
+        <p1 class="info"><center>9450 Gilmann Drive, La Jolla, CA 92092 | (123) 456-7899 | mazou@ucsd.edu</center></p1>
     </header>
 
     <main>
 
-        <hr>
-
-        <section>
-            <u><h2>Education</h2></u>
+        <section class="section">
+            <h2>Education</h2>
             <article>
                 <header>
-                    <h3>University of California, San Diego</h3>
-
-                    <div>
-                        <table width="100%">
-                            <tr>
-                                <td>Business Economics & Data Science Double Major</td>
-                                <td align="right">San Diego, CA</td>
-                            </tr>
-                        </table>
+                    <div class="entry">
+                        <h3>University of California, San Diego</h3>
+                        <div class="loc">San Diego, CA</div>
+                        <p class="title">Business Economics & Data Science Double Major</p>
+                        <div class="date"><b>Expected Graduation:</b> March 2025</div>
                     </div>
                     
                 </header>
-                <p><i>Coursework: Data Science Fundamentals, Linear Algebra, Statistics, Python, Database Management</i></p>
+                <p class="info"><i><b>Coursework:</b> Data Science Fundamentals, Linear Algebra, Statistics, Python, Database Management</i></p>
             </article>
         </section>
 
-        <hr>
-
-        <section>
-            <u><h2>Work Experience</h2></u>
+        <section class="section">
+            <h2>Work Experience</h2>
             <article>
                 
-                <div>
-                    <table width="100%">
-                        <tr>
-                            <td><b>McDonald's</b></td>
-                            <td align="right">San Diego, CA</td>
-                        </tr>
-                        <tr>
-                            <td>CEO of McDonald's</td>
-                            <td align="right">June 2024-August 2025</td>
-                        </tr>
-                    </table>
+                <div class="entry">
+                    <h3>McDonald's</h3>
+                        <div class="loc">San Diego, CA</div>
+                        <p class="title">CEO of McDonald's</p>
+                        <div class="date">June 2024-August 2025</div>
                 </div>
 
-                <ul>
+                <ul class="info">
                     <li>Responsible for entire supply chain of produce and labor, while simultaneously managing millions of employees from lowest level to highest</li>
                     <li>Lead expansion conversations with other major competitors, and spearheaded aquisition of their comapnies</li>
                     <li>Monumental achievement of over 1000% work efficiency only 2 weeks after took over the role from previous CEO</li>
@@ -71,21 +101,14 @@
             </article>
 
             <article>
-                
-                <div>
-                    <table width="100%">
-                        <tr>
-                            <td><b>Rome</b></td>
-                            <td align="right">San Diego, CA</td>
-                        </tr>
-                        <tr>
-                            <td>Conqueror of Rome</td>
-                            <td align="right">June 2023-August 2024</td>
-                        </tr>
-                    </table>
+                <div class="entry">
+                    <h3>Rome</h3>
+                    <div class="loc">San Diego, CA</div>
+                    <p class="title">Conqueror of Rome</p>
+                    <div class="date">June 2023-August 2024</div>
                 </div>
 
-                <ul>
+                <ul class="info">
                     <li>Conquered over 50% of the continent in order to build one of the largest empires within the known world</li>
                     <li>Pioneered exploration to unknown parts of the universe, eventually discovering and utillizing space travel</li>
                     <li>Utilized massive amounts of transcendental knowledge in order to invent time traveling, and went back in time to conquer more lands</li>
@@ -93,21 +116,14 @@
             </article>
 
             <article>
-                
-                <div>
-                    <table width="100%">
-                        <tr>
-                            <td><b>Orange</b></td>
-                            <td align="right">San Diego, CA</td>
-                        </tr>
-                        <tr>
-                            <td>Founder</td>
-                            <td align="right">June 2022-August 2023</td>
-                        </tr>
-                    </table>
+                <div class="entry">
+                    <h3>Orange</h3>
+                    <div class="loc">San Diego, CA</div>
+                    <p class="title">Founder</p>
+                    <div class="date">June 2022-August 2023</div>
                 </div>
 
-                <ul>
+                <ul class="info">
                     <li>Founded Orange as a direct competitor to companies like Apple, in order to revolutionize the market for smart devices</li>
                     <li>Catapaulted the Technology industry into 500 years of progress and innovation, eventually combining all companies into one</li>
                     <li>Acheived domineering monopoly over the universe's knowledge, and ended with Orange standing at the top</li>
@@ -115,16 +131,13 @@
             </article>
         </section>
 
-        <hr>
-
-        <section>
-            <u><h2>Skills & Interests</h2></u>
-            <ul>
+        <section class="section">
+            <h2>Skills & Interests</h2>
+            <ul class="info">
                 <li><b>Skills:</b> Conquering, Managing, Scaling, All Coding Languages, All Knowledge in Known Universe, Transcendental</li>
                 <li><b>Interests:</b> World Changing Events, Knowedge of All, Uniting the World, Expand Domain, Traveling, Cooking</li>
             </ul>
         </section>
-
     </main>
 </body>
 </html>
