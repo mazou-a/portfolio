@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../global.js" type="module"></script>
 </head>
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../projects/index.html">Projects</a>
-        <a href="index.html" class="current">Contact</a>
-        <a href="../CV(Resume)/index.html">CV/Resume</a>
-        <a href="https://github.com/mazou-a" target="_blank">GitHub</a>
-    </nav>
     <h1>Contact</h1>
-    <form action="mailto:mazou@ucsd.edu" method="POST" enctype="text/plain" style="font: inherit; display: grid; grid-template-columns: auto 1fr; gap: 1em;">
+    <form action="mailto:mazou@ucsd.edu" method="POST" enctype="text/plain">
         <label for="email" >Email:</label>
         <input type="email" id="email" name="email" required>
 
@@ -25,7 +19,7 @@
         <label for="body">Body:</label>
         <textarea id="body" name="body" rows="3" required></textarea>
 
-        <button style="grid-column: 1 / -1;">Submit</button>
+        <button>Submit</button>
     </form>
 
 </body>

@@ -7,14 +7,21 @@ body {
     max-width: 100ch;
     margin-inline: auto;
     padding: 1rem;
-  }
+}
+
+html {
+    color-scheme: light dark;
+    background-color: Canvas;
+    color: CanvasText;
+}
 
 nav {
+    --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     margin-bottom: 1em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    border-bottom-color: var(--border-color);
 }
 
 nav a {
@@ -23,12 +30,11 @@ nav a {
     color: inherit;
     text-align: center;
     padding: 0.5em;
-
 }
 
 nav a:hover {
     border-bottom: 0.4em solid var(--color-accent);
-    background-color: oklch(from var(--color-accent) 95% 5% h)
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 :root {
@@ -37,7 +43,7 @@ nav a:hover {
 }
 
 .current {
-    border-bottom: 0.4em solid oklch(80% 3% 200); 
+    border-bottom: 0.4em solid var(--border-color); 
     padding: 0.5em
 }
 
@@ -46,7 +52,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     grid-row: span 3;
     gap: 1em;
-  }
+}
 
 .projects article {
     display: grid;
@@ -56,13 +62,37 @@ nav a:hover {
 
 .projects article h2 {
     margin: 0;
-  }
+}
 
 h1 {
-font-size: 400%;
+    font-size: 400%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-line-height: 1.1;
-text-wrap: balance;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+form {
+    display: grid;
+    font: inherit;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+
+ button {
+    grid-column: 1 / -1;
+ }
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit;
+}
+
+select {
+    font-size: inherit;
+    font-family: inherit;
 }
