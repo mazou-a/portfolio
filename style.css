@@ -103,12 +103,6 @@ select {
     max-width: 600px;
   }
   
-  /* Styling for the header */
-  #profile-stats h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
   /* Styling the stats grid */
   #profile-stats dl {
     display: grid;
