@@ -103,7 +103,7 @@ select {
   }
   
 
-  #profile-stats dl {
+  #profile-stats dl, .stats{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
@@ -111,7 +111,7 @@ select {
   }
   
 
-  #profile-stats dt {
+  #profile-stats dt, .stats dt{
     grid-row: 1;
     font-size: 1rem;
     color: gray;
@@ -120,7 +120,7 @@ select {
   }
   
 
-  #profile-stats dd {
+  #profile-stats dd, .stats dd{
     grid-row: 2;
     font-size: 1.5rem;
     font-weight: bold;
@@ -205,3 +205,55 @@ select {
       fill: var(--color);
     }
   }
+
+.gridlines line {
+    stroke: #ccc;
+    stroke-opacity: 0.5;
+    stroke-width: 1px;
+}
+
+.gridlines path {
+    display: none;
+}
+
+dl.info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em;
+    margin: 0;
+    padding: 10px;
+}
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  
+  circle:hover {
+    transform: scale(1.5);
+  }
+
+dl.info {
+    /* ... other styles ... */
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+  }
+  
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: teal;
+    border-radius: 6px;
+}
+
+circle.selected {
+    fill: #ff6b6b;
+  }
+  
