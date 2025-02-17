@@ -15,6 +15,7 @@ async function loadData() {
     processCommits();
     createScatterplot();
     brushSelector();
+    updateTooltipVisibility(false);
   }
 
 document.addEventListener('DOMContentLoaded', async () => {
