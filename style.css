@@ -270,4 +270,9 @@ circle.selected {
     stroke-dasharray: 5 3;
     animation: marching-ants 2s linear infinite;
   }
-  
+
+.project-img {
+    display: block;
+    max-width: 100%;
+    max-height: auto;
+}
